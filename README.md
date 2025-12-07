@@ -2,7 +2,7 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/giddykobby/Ecommerce-product-api)
 ![GitHub repo size](https://img.shields.io/github/repo-size/giddykobby/Ecommerce-product-api)
-![GitHub issues](https://img.shields.io/github/issues/giddykobby/Ecommerce-product-apii)
+![GitHub issues](https://img.shields.io/github/issues/giddykobby/Ecommerce-product-api)
 ![GitHub stars](https://img.shields.io/github/stars/giddykobby/Ecommerce-product-api?style=social)
 
 > **Status:** In Development  
