@@ -1,9 +1,9 @@
 # E-commerce Product API (Django + DRF)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/giddykobby/Ecommerce-ap)
-![GitHub repo size](https://img.shields.io/github/repo-size/giddykobby/Ecommerce-ap)
-![GitHub issues](https://img.shields.io/github/issues/giddykobby/Ecommerce-ap)
-![GitHub stars](https://img.shields.io/github/stars/giddykobby/Ecommerce-ap?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/giddykobby/Ecommerce-api)
+![GitHub repo size](https://img.shields.io/github/repo-size/giddykobby/Ecommerce-api)
+![GitHub issues](https://img.shields.io/github/issues/giddykobby/Ecommerce-api)
+![GitHub stars](https://img.shields.io/github/stars/giddykobby/Ecommerce-api?style=social)
 
 > **Status:** In Development  
 > **Tech Stack:** Django · Django REST Framework · SQLite  
