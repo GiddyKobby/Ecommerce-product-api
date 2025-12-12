@@ -58,10 +58,10 @@ ecommerce-api/
 - [x] Configure DRF
 - [x] Add Product & Category models
 - [x] Register models in admin
-- [x] Push initial project to GitHub
+- [] Push initial project to GitHub
 
 ### 🚧 Phase 2: Core API
-- [ ] Product CRUD (Create, Read, Update, Delete)
+- [x] Product CRUD (Create, Read, Update, Delete)
 - [ ] Category CRUD
 - [ ] User authentication (JWT)
 - [ ] Permissions (Only authenticated users can edit/delete)
