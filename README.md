@@ -22,6 +22,7 @@ The API supports product management, user authentication, search, filtering, and
 - Product CRUD (Create, Read, Update, Delete)
 - Category management
 - User authentication (Django Auth / JWT)
+- Role-based access control (Admin vs User)
 - Product search by name or category
 - Filtering (price range, category, stock availability)
 - Pagination
@@ -62,9 +63,10 @@ ecommerce-api/
 
 ### 🚧 Phase 2: Core API
 - [x] Product CRUD (Create, Read, Update, Delete)
-- [ ] Category CRUD
-- [ ] User authentication (JWT)
-- [ ] Permissions (Only authenticated users can edit/delete)
+- [x] Category CRUD
+- [x] User authentication (JWT)
+- [x] Role-based permissions (Admin-only create/update/delete, authenticated users read-only)
+
 
 ### 🔍 Phase 3: Search & Filters
 - [ ] Search by product name
