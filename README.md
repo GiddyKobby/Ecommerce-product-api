@@ -69,11 +69,11 @@ ecommerce-api/
 
 
 ### 🔍 Phase 3: Search & Filters
-- [ ] Search by product name
-- [ ] Filter by category
+- [x] Search by product  (and description)
+- [x] Filter by category
 - [ ] Price range filter
 - [ ] Stock availability filter
-- [ ] Pagination on product listing
+- [x] Pagination on product listing
 
 ### 🌐 Phase 4: Deployment
 - [ ] Prepare `requirements.txt`

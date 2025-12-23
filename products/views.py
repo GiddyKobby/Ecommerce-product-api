@@ -1,16 +1,17 @@
 from rest_framework import viewsets
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
+from rest_framework.permissions import AllowAny
 
 from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer
-from .permissions import IsAdminOrReadOnly
 from .pagination import ProductPagination, CategoryPagination
+from .permissions import IsAdminOrReadOnly
+
 
 class ProductViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [IsAdminOrReadOnly]
+    permission_classes = [AllowAny]   # 👈 THIS IS THE KEY
     pagination_class = ProductPagination
 
     filter_backends = [
@@ -24,12 +25,31 @@ class ProductViewSet(viewsets.ModelViewSet):
     ordering_fields = ['price', 'created_at']
     ordering = ['-created_at']
 
+    def get_queryset(self):
+        queryset = Product.objects.all()
+
+        min_price = self.request.query_params.get('min_price')
+        max_price = self.request.query_params.get('max_price')
+
+        if min_price:
+            try:
+                queryset = queryset.filter(price__gte=float(min_price))
+            except ValueError:
+                pass
+
+        if max_price:
+            try:
+                queryset = queryset.filter(price__lte=float(max_price))
+            except ValueError:
+                pass
+
+        return queryset
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = [IsAdminOrReadOnly]
+    permission_classes = [AllowAny]   # 👈 SAME HERE
     pagination_class = CategoryPagination
 
     filter_backends = [SearchFilter, OrderingFilter]
