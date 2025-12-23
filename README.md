@@ -71,8 +71,8 @@ ecommerce-api/
 ### 🔍 Phase 3: Search & Filters
 - [x] Search by product  (and description)
 - [x] Filter by category
-- [ ] Price range filter
-- [ ] Stock availability filter
+- [x] Price range filter (min_price, max_price)
+- [x] Stock availability filter
 - [x] Pagination on product listing
 
 ### 🌐 Phase 4: Deployment

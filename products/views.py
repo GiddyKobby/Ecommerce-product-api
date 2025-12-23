@@ -7,7 +7,7 @@ from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer
 from .pagination import ProductPagination, CategoryPagination
 from .permissions import IsAdminOrReadOnly
-
+from .filters import ProductFilter
 
 class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
@@ -20,7 +20,7 @@ class ProductViewSet(viewsets.ModelViewSet):
         OrderingFilter
     ]
 
-    filterset_fields = ['category']
+    filterset_class = ProductFilter    # 👈 CONNECT CUSTOM FILTER
     search_fields = ['name', 'description']
     ordering_fields = ['price', 'created_at']
     ordering = ['-created_at']
